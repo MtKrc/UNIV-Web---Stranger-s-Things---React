@@ -22,7 +22,7 @@ button.ui.button,
 }
 
 #nav-bar {
-  /* min-width: min-content; */
+
   width: 100vw;
   align-items: center;
   flex-shrink: 0;
@@ -31,7 +31,6 @@ button.ui.button,
   padding-right: 3vw;
   background-color: #101010e7;
   padding-bottom: 3px;
-  /* box-shadow: #1010103e 0px 3px 6px; */
   justify-content: center;
 }
 
@@ -110,7 +109,7 @@ button.ui.button,
   right: 2%;
   margin: auto;
   background-color: transparent;
-  color: purple;
+  color: darkred;
   transition: all 0.3s ease;
   z-index: 100;
 }
@@ -171,7 +170,7 @@ input:focus {
 .message {
   padding-top: 10px;
   text-align: center;
-  color: rebeccapurple;
+  color: goldenrod;
 }
 
 .headerMast {
@@ -192,14 +191,12 @@ input:focus {
   font-family: "Righteous", cursive;
   font-weight: 400;
   margin-top: 170px;
-  /* padding-top: 150px; */
-  /* padding-bottom: 100px; */
-  /* height: 1000px; */
+
 }
 
 #searchOrCreate {
   margin-top: 160px;
-  /* margin-bottom: 300px; */
+
 }
 
 #searchOrCreate .button,
@@ -259,7 +256,6 @@ div.field label {
 #userMessageCards .card {
   border-radius: 15px;
   padding: 8px 4px;
-  /* margin: 20px 0; */
   box-shadow: #e1e1e1 0px 0px 10px 2px;
   background-color: white;
 }
@@ -278,7 +274,7 @@ div.field label {
   }
 
   div.ui.icon.action.input {
-    /* margin-left: -3px; */
+
     width: 180px;
     justify-content: center;
   }

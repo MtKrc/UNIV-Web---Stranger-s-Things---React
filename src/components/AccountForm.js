@@ -25,7 +25,7 @@ const AccountForm = ({ setToken }) => {
       if (data) {
         navigate("/");
       } else {
-        // navigate("/account/register");
+        
         setErrorMessage(true);
       }
     } catch (error) {

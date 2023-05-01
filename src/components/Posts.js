@@ -6,7 +6,7 @@ import { deletePost } from "../api/api";
 const Posts = ({ post, setPost, token }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredPosts, setFilteredPosts] = useState(post);
-  // Create a search bar to search for posts.
+  // Creating a search bar to search for posts.
 
   useEffect(() => {
     if (searchTerm) {
@@ -19,8 +19,7 @@ const Posts = ({ post, setPost, token }) => {
           postObject.author.username,
         ];
 
-        // loop through the values and check them against the search term one at a time
-        // only match if the value and search term are non-empty strings (because matching against an empty string will always return true)
+        
         for (let attribute of filteredAttributes) {
           const attributeLower = attribute.toLowerCase().trim();
 

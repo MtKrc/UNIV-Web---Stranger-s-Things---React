@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, Route, Routes, useNavigate } from "react-router-dom";
 import { fetchPosts, fetchUser } from "./api/api";
 import "./App.css";
+
 import {
   AccountForm,
   Home,
@@ -11,7 +12,7 @@ import {
   Profile,
 } from "./components";
 
-//----------------- App -----------------
+//App
 const App = () => {
   const [post, setPost] = useState([]);
   const [token, setToken] = useState(
@@ -31,15 +32,11 @@ const App = () => {
     }
   };
 
-  //----------------- useEffects -----------------
+  //useEffects
   useEffect(() => {
     getPosts();
   }, [token]);
 
-  // If I set fetchUser to token.token, login works fine.
-  // Otherwise, I get an error but login still works sometimes?
-  // But using token.token makes my registration fail. Not sure
-  // where the bug is but I'm going to leave it as is for now.
   useEffect(() => {
     if (token) {
       const getUser = async () => {
@@ -65,7 +62,7 @@ const App = () => {
     navigate("/");
   };
 
-  //----------------- return -----------------
+  //return
   return (
     <div className='container'>
       {location.pathname === "/posts" ? (
@@ -105,7 +102,9 @@ const App = () => {
               <Link className='green ui button' to='/account/login'>
                 Log In
               </Link>
-              {/* TODO - center the or and make it the same font */}
+              {
+                
+              }
               <div
                 className='or'
                 style={{

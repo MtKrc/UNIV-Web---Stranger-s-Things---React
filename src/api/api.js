@@ -11,7 +11,7 @@ export const fetchPosts = async (token) => {
     const { data } = await response.json();
     return data.posts;
   } catch (error) {
-    console.error("!!Error Fetching posts!!:", error);
+    console.error("!!Error Fetching Posts!!:", error);
   }
 };
 
@@ -32,7 +32,7 @@ export const registerUser = async (username, password) => {
     const { data } = await response.json();
     return data.token;
   } catch (error) {
-    console.error("!! Error registering User !!:", error);
+    console.error("!! Error Registering User !!:", error);
   }
 };
 
@@ -104,7 +104,7 @@ export const createPost = async (
   }
 };
 
-// REVIEW - Check if there needs to be a response const and return of success, error, or data.
+
 export const deletePost = async (token, postId) => {
   try {
     await fetch(`${BASEURL}/posts/${postId}`, {
@@ -139,70 +139,3 @@ export const createMessage = async (token, postId, content) => {
     console.error("POST /posts/:postId/messages failed:", error);
   }
 };
-
-// Did the api part for the edit functionality bonus.
-//Felt like doing styling etc more instead. I do know how to implement it though.
-
-//--------------------- Post edit API call ------------------------//
-//
-// export const editPost = async (
-//   token,
-//   title,
-//   description,
-//   price,
-//   location,
-//   willDeliver,
-//   postId
-// ) => {
-//   try {
-//     const response = await fetch(`${BASEURL}/posts/${postId}`, {
-//       method: "PATCH",
-//       headers: {
-//         "Content-Type": "application/json",
-//         Authorization: `Bearer ${token}`,
-//       },
-//       body: JSON.stringify({
-//         post: {
-//           title,
-//           description,
-//           price,
-//           location,
-//           willDeliver,
-//         },
-//       }),
-//     });
-//     const { data } = await response.json();
-//     return data;
-//   } catch (error) {
-//     console.error("PATCH /posts/#postId Failed:", error);
-//   }
-// };
-
-// CHUCK
-// NOTE - I didn't use these purely because it made it much harder to read imo.
-// NOTE - In the case of DRY though, I fully understand that it would be better to use these.
-//
-// ----------------------- API Helper Functions -----------------------//
-//
-//
-// REVIEW - Fully implement these helper functions to reduce code duplication.
-// TODO - Add helper function for the headers/token for all the fetches.
-// TODO - Add helper function callAPI for all the fetches.
-//
-//
-//
-// const makeHeaders = (token) => {
-//   const headers = {
-//     "Content-Type": "application/json",
-//   };
-
-//   if (token) {
-//     headers["Authorization"] = `Bearer ${token}`;
-//   }
-
-//   return headers;
-// };
-
-//  //----------------- callAPI No Error Handling -----------------
-
-// const callAPI = async (endpointPath, defaultOptions = {}) => {};

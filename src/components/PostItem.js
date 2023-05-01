@@ -2,11 +2,13 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const PostItem = ({ post, postHeader, children }) => {
-  //TODO - Add time to post and format it to how recent it was posted. Like, "Posted 1 day ago."
+  
 
   return (
     <div className='ui fluid card' id='postCard'>
-      {/* <div className='ui top inverted attached block header'> */}
+      {
+
+      }
 
       <div className='ui top attached inverted header'>
         <div className='ui inverted segment' id='postCardHeader'>
@@ -18,8 +20,9 @@ const PostItem = ({ post, postHeader, children }) => {
       </div>
 
       <div className='content'>
-        {/* <div className='right aligned tiny header'>{post.createdAt}</div>
-        // Note - Date is too specific. Might want to install package to easily show time? */}
+        {
+
+        }
         <div className='centered aligned description'>
           <h4 className='tiny ui horizontal divider header'>
             <i className='tag icon'></i>

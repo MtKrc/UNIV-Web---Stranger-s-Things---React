@@ -1,21 +1,6 @@
 import React from "react";
 
 const Profile = ({ user }) => {
-  //
-
-  // Hey Chuck,
-  //
-  // I can't figure out why a duplicate message is always made.
-  // I think it is because I tested messages by sending them to myself.
-  // So it might actually work fine, you can test and see.
-  //
-  // The problem it causes is that I set the key in the map to be the message id,
-  // so it is not unique. But I end up getting an error logged about two children
-  // with the same key. Basically two duplicate messages are made with the same ID.
-  //
-  // Thanks.
-
-  //
 
   return (
     <>
